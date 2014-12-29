@@ -1,60 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="DelayJS : Delayed Conditioning - The Easy Way">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>DelayJS</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/eladkarako/DelayJS">View on GitHub</a>
-
-          <h1 id="project_title">DelayJS</h1>
-          <h2 id="project_tagline">Delayed Conditioning - The Easy Way</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/eladkarako/DelayJS/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/eladkarako/DelayJS/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="delayjs" class="anchor" href="#delayjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>DelayJS</h3>
-
-<hr>
-
-<p>Wrapping good old <code>setTimeout</code> to provide a recursive (but low-memory consumption), rapidly checking any state condition (you provide the function that does the checking), it is scope neutral and enable an asynchronous execution of callback method just when the condition has set to be true</p>
-
-<hr>
-
-<p>arguments are passed in the new advised JavaScript style, as an object container, to provide simplicity, readability and flexibility in code maintenance (it is actually, a new <em>thing</em>!)</p>
-
-<hr>
-
-<p>code is part of another project, enjoy ;)</p>
-
-<hr>
-
-<p>note that the code uses some minor object-prototyping</p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-c">/**</span>
-<span class="pl-c"> * just like jQuery's $.extend.</span>
-<span class="pl-c"> * @param  {Object=} obj</span>
-<span class="pl-c"> * @return {Object}</span>
-<span class="pl-c"> */</span>
+<html><head><meta charset='utf-8'><meta http-equiv="X-UA-Compatible" content="chrome=1"><meta name="description" content="DelayJS : Delayed Conditioning - The Easy Way"><link rel="stylesheet" type="text/css" media="screen" href="website/stylesheets/stylesheet.css"><title>DelayJS</title></head><body><!-- HEADER --><div id="header_wrap" class="outer"><header class="inner"><a id="forkme_banner" href="https://github.com/eladkarako/DelayJS">View on GitHub</a><h1 id="project_title">DelayJS</h1><h2 id="project_tagline">Delayed Conditioning - The Easy Way</h2><section id="downloads"><a class="zip_download_link" href="https://github.com/eladkarako/DelayJS/zipball/master">Download this project as a .zip file</a><a class="tar_download_link" href="https://github.com/eladkarako/DelayJS/tarball/master">Download this project as a tar.gz file</a></section></header></div><!-- MAIN CONTENT --><div id="main_content_wrap" class="outer"><section id="main_content" class="inner"><h3><a id="delayjs" class="anchor" href="#delayjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>DelayJS</h3><hr><p>Wrapping good old <code>setTimeout</code> to provide a recursive (but low-memory consumption), rapidly checking any state condition (you provide the function that does the checking), it is scope neutral and enable an asynchronous execution of callback method just when the condition has set to be true</p><hr><p>arguments are passed in the new advised JavaScript style, as an object container, to provide simplicity, readability and flexibility in code maintenance (it is actually, a new <em>thing</em>!)</p><hr><p>code is part of another project, enjoy ;)</p><hr><p>note that the code uses some minor object-prototyping</p><div class="highlight highlight-javascript"><pre><span class="pl-c">/**</span><span class="pl-c"> * just like jQuery's $.extend.</span><span class="pl-c"> * @param  {Object=} obj</span><span class="pl-c"> * @return {Object}</span><span class="pl-c"> */</span>
 <span class="pl-s3">Object</span>.<span class="pl-sc">prototype</span>.<span class="pl-en">nExtend</span> <span class="pl-k">=</span> <span class="pl-st">function</span>(<span class="pl-vpf">obj</span>) {
   <span class="pl-s">var</span> key;
   <span class="pl-k">for</span> (key <span class="pl-k">in</span> obj) {
@@ -63,49 +8,7 @@
     }
   }
   <span class="pl-k">return</span> <span class="pl-v">this</span>;
-};</pre></div>
-
-<p>my arguments are objected into a nice <code>{}</code>, this way the whole thing is dynamic, an easily updated,</p>
-
-<p>saving some text cluttering in the code here is the doc for the method</p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-c">/**</span>
-<span class="pl-c"> * DelayJS is an easy to use delayed conditioning.</span>
-<span class="pl-c"> *</span>
-<span class="pl-c"> * @param {{</span>
-<span class="pl-c">     condition_function:      function(...[*]): boolean,</span>
-<span class="pl-c">     condition_callback:      function(),</span>
-<span class="pl-c">     delay_number:            number=,</span>
-<span class="pl-c">     limit_number:            number=,</span>
-<span class="pl-c">     limit_callback:          function()=,</span>
-<span class="pl-c">     DEBUG_MODE:              boolean=,</span>
-<span class="pl-c">     LAST:                    number=,</span>
-<span class="pl-c">     NOW:                     number=</span>
-<span class="pl-c">    }} args</span>
-<span class="pl-c"> * @return {boolean} - true if condition is true, false if limit has reached.</span>
-<span class="pl-c"> */</span></pre></div>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">DelayJS maintained by <a href="https://github.com/eladkarako">eladkarako</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-58067712-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-
-  </body>
-</html>
+};</pre></div><p>my arguments are objected into a nice <code>{}</code>, this way the whole thing is dynamic, an easily updated,</p><p>saving some text cluttering in the code here is the doc for the method</p><div class="highlight highlight-javascript"><pre><span class="pl-c">/**</span><span class="pl-c"> * DelayJS is an easy to use delayed conditioning.</span><span class="pl-c"> *</span><span class="pl-c"> * @param {{</span><span class="pl-c">     condition_function:      function(...[*]): boolean,</span><span class="pl-c">     condition_callback:      function(),</span><span class="pl-c">     delay_number:            number=,</span><span class="pl-c">     limit_number:            number=,</span><span class="pl-c">     limit_callback:          function()=,</span><span class="pl-c">     DEBUG_MODE:              boolean=,</span><span class="pl-c">     LAST:                    number=,</span><span class="pl-c">     NOW:                     number=</span><span class="pl-c">    }} args</span><span class="pl-c"> * @return {boolean} - true if condition is true, false if limit has reached.</span><span class="pl-c"> */</span></pre></div></section></div><!-- FOOTER  --><div id="footer_wrap" class="outer"><footer class="inner">
+<p class="copyright">DelayJS is maintained by <a href="https://github.com/eladkarako">eladkarako</a></p>
+<p class="copyright">Visit My Blog At <a target="_blank" href="http://icompile.eladkarako.com">icompile.eladkarako.com</a></p>
+</p></footer></div><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-58067712-1");pageTracker._trackPageview();} catch(err) {}</script></body></html>
